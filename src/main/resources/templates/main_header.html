@@ -3,10 +3,10 @@
 
 <body>
     <div th:fragment="main-header">
-        <nav class="navbar navbar-inverse">
+        <nav class="navbar navbar-default navbar-inverse" role="navigation">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="/">MeetUp-TriAngel</a>
+                <li><a class="navbar-brand" href="/">MeetUp</a></li>
             </div>
             <ul class="nav navbar-nav">
                 <li><a href="/events">Events</a></li>
@@ -14,7 +14,7 @@
                 <li><a href="/groups">Groups</a></li>
             </ul>
                 <div th:if="${isLogged != null}">
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="navbar-right">
                         <li><a><span style="color: #7cfc00; "><h4 th:text="'Welcome, '+${isLogged}"></h4></span></a></li>
                         <li><a href="/logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
                     </ul>
