@@ -32,6 +32,7 @@
     <h1>Meetup Clone</h1>
 </div>
 
+
 <div class="container">
 
     <div th:include="main_header :: main-header"></div>
@@ -43,39 +44,49 @@
         <h3 th:if="${isSuccess}">u can log in now, bruh</h3>
         <h3 th:unless="${isSuccess}">u gotta choose another name</h3>
     </div>
-
+</div>
+<div class="containter">
     <div class="counter">
+        <script type="text/javascript">
+        $('.counter-count').each(function () {
+        $(this).prop('Counter',0).animate({
+        Counter: $(this).text()
+        }, {
+        duration: 5000,
+        easing: 'swing',
+        step: function (now) {
+        $(this).text(Math.ceil(now));
+        }
+        });
+        });
+        </script>
         <div class="row">
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                 <div class="events">
-                    <p class="counter-count">879</p>
+                    <p class="counter-count">17</p>
                     <p class="event-p">Events</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
+                <div class="groups">
+                    <p class="counter-count">4</p>
+                    <p class="groups-p">Groups</p>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                 <div class="user">
-                    <p class="counter-count">954</p>
+                    <p class="counter-count">25</p>
                     <p class="user-p">User</p>
                 </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                <div class="groups">
-                    <p class="counter-count">11</p>
-                    <p class="groups-p">Groups</p>
-                </div>
-            </div>
-
-            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
                 <div class="logged">
-                    <p class="counter-count">6</p>
+                    <p class="counter-count">2</p>
                     <p class="logged-p">Logged in</p>
                 </div>
             </div>
         </div>
     </div>
 </div>
-
-
-
 </body>
 </html>
