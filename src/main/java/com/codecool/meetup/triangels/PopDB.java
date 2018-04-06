@@ -21,7 +21,7 @@ public class PopDB {
                  CommentRepo commentRepo, GroupRepo groupRepo,
                  InterestRepo interestRepo, Utility utility) {
 
-
+        /*
         //CREATE CLASSES
         User user1 = new User ("Emil", "123", utility.hashPassword("xxx"), "speaker-1.png", "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ip");
         User user2 = new User ("Carol", "2", utility.hashPassword("xxx"), "speaker-2.png",  "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ip");
@@ -100,7 +100,7 @@ public class PopDB {
 
         commentRepo.save(comment);
 
-
+*/
 
     }
 
