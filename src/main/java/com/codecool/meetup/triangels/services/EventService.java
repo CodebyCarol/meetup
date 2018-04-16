@@ -107,4 +107,8 @@ public class EventService {
         return upcoming;
 
     }
+    //counting all events
+    public long countAll(){
+        return eventRepo.count();
+    }
 }

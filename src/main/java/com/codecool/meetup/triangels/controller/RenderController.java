@@ -34,6 +34,8 @@ public class RenderController {
         model.addAttribute("isLogged", session.getAttribute("name")); // ha ez true, van session, ha nem, akkor nincs -
         model.addAttribute("list", true);
         model.addAttribute("eventlist", eventService.getAll());
+        //counting created events
+        model.addAttribute("countEvents", eventService.countAll());
         return "index";
     }
 

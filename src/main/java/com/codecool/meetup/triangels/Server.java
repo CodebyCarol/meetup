@@ -12,7 +12,7 @@ public class Server {
         SpringApplication.run(Server.class, args);
 
     }
-}
+};
 
 
 
@@ -94,7 +94,7 @@ public class Server {
 //        post("create/event", renderController :: createEvent, new ThymeleafTemplateEngine());
 //
 //        post("create/group", renderController :: createGroup, new ThymeleafTemplateEngine());
-//
+
 //        post("/create/comment/:id", renderController :: createComment, new ThymeleafTemplateEngine());
 //    }
 //}
