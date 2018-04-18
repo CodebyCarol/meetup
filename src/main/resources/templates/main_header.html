@@ -28,14 +28,42 @@
                 <!--li><a href="/logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li-->
             </ul>
             <!--login-->
-            <ul th:unless="${isLogged != null}" class="nav navbar-nav navbar-right">
+            <ul th:if="${isLogged == null}" class="nav navbar-nav navbar-right">
                 <li><p class="navbar-text">Already registered?</p></li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Log in!</b> <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Log in!</b>
+                        <!--small peace of arrow-->
+                        <span class="caret"></span></a>
+                    <ul id="login-dp" class="dropdown-menu">
+                        <li>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    Login via
+                                    <div class="social-buttons">
+                                        <a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
+                                        <a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
+                                    </div>
+                                    or
+                                    <form class="form" role="form" method="POST" action="login" id="login-nav">
+                                        <div class="form-group">
+                                            <ul>
+                                                <input type="text" name="name" value="" placeholder="Name"/>
+                                                <input type="password" name="password" value="" placeholder="Password"/>
+                                                <button class="glyphicon glyphicon-log-in" type="submit" value="Login"/>
+                                                    if you do not have an account
+                                                <a href="/sign-up"><span class="glyphicon glyphicon-user"></span> Sign Up</a>
+                                            </ul>
+                                        </div>
+                                        <!--end of login form-->
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
                 </li>
             </ul>
+            <!-- end of login dropdown menu-->
         </div>
-
     </div>
 </nav>
 </div>
