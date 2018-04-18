@@ -1,34 +1,30 @@
+
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-
 <body>
-    <div th:fragment="main-header">
-        <nav class="navbar navbar-default navbar-inverse" role="navigation">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="/">MeetUp-TriAngel</a>
-            </div>
-            <div class="nav navbar-nav">
+<div th:fragment="main-header">
+<nav class="navbar navbar-default navbar-inverse" role="navigation">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">HOME</a>
+        </div>
+        <!--navigation links -->
+        <div>
+            <ul class="nav navbar-nav">
                 <li><a href="/events">Events</a></li>
                 <li><a href="/users">Users</a></li>
                 <li><a href="/groups">Groups</a></li>
-            </div>
-                <div th:if="${isLogged != null}">
-                    <ul class="navbar-right">
-                        <li><a><span style="color: #7cfc00; "><h4 th:text="'Welcome, '+${isLogged}"></h4></span></a></li>
-                        <li><a href="/logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
-                    </ul>
-                </div>
-                <form th:unless="${isLogged != null}" method="POST" action="/login">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="/sign-up"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                        <li><input type="text" name="name" value="" placeholder="Name"/></li>
-                        <li><input type="password" name="password" value="" placeholder="Password"/></li>
-                        <li><button class="glyphicon glyphicon-log-in" type="submit" value="Login"/></li>
-                    </ul>
-                </form>
-            </div>
-        </nav>
+            </ul>
+        </div>
     </div>
+</nav>
+</div>
 </body>
 </html>

@@ -43,3 +43,8 @@
     position: relative;
     width: 100%;
 }
+
+.navbar-right {
+    position: relative;
+    alignment: right;
+}
