@@ -45,9 +45,10 @@
         <h3 th:if="${isSuccess}">u can log in now, bruh</h3>
         <h3 th:unless="${isSuccess}">u gotta choose another name</h3>
     </div>
-    <div class="counter">
-        <div th:if="@{'/'}" th:include="counter :: counter"></div>
-    </div>
+    <!--div class="counter"-->
+    <a th:href="@{/}" th:include="counter :: counter"></a>
+    <!--"@{/comments(prodId=${prod.id})}"-->
+    <!--/div-->
 </div>
 
 

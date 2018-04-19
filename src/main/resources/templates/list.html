@@ -1,13 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
-
-
-
 ​<body>
-
 <div th:fragment="list">
-
 
     <div th:if="${events}">
         <!--ADD NEW EVENT-->
@@ -56,10 +51,11 @@
         <!--EVENTLIST-->
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
+                <div class="col-sm-4 col-sm-8">
+                <!--div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2"-->
 
                     <!-- Fluid width widget -->
-                    <div class="panel panel-danger">
+                    <div class="panel panel-info">
                         <div class="panel-heading">
                             <h3 class="panel-title">
                                 <span class="glyphicon glyphicon-calendar"></span> 
@@ -97,7 +93,9 @@
                         <a href="#" class="btn btn-default btn-block">More Events »</a>
                     </div>
                     <!-- End fluid width widget -->
-
+                </div>
+                <div class="container">
+                    <img class="img-responsive" src="/pictures/alter.jpg" width="550" height="334"/>
                 </div>
             </div>
         </div>
