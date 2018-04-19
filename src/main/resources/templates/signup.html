@@ -2,17 +2,38 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 
 <body>
-    <div th:fragment="signup">
-        <div>
+<div th:fragment="signup">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <div class="row myborder">
             <form method="POST" action="/sign-up">
-                <h3>Name: </h3><input type="text" name="name" value=""/><br/>
-                <h3>E-mail: </h3><input type="text" name="email" value=""/><br/>
-                <h3>Password: </h3><input type="password" name="password" value=""/><br/>
-                <h3>Intro:</h3><input type="text" id="intro" name="intro" value="" maxlength="255"/><br/>
-                <!--h3>Avatar:</h3><input type="src" id="avatar" name="avatar" value=""/><br/><br/-->
-                <input class="btn btn-success" type="submit"  value="Sign Up pls"/>
+                <h4 style="color: #7EB59E; margin: initial; margin-bottom: 10px;">Sign Up Now</h4>
+                <!--name-->
+                <div class="input-group margin-bottom-20">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user mycolor"></i></span>
+                    <input type="text" name="name" value="" placeholder="Username" size="60" maxlength="255" class="form-control"/></div>
+                <!--email-->
+                <div class="input-group margin-bottom-20">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope mycolor"></i></span>
+                    <input type="text" name="email" value="" placeholder="E-mail" size="60" maxlength="255" class="form-control"/></div>
+                <!--password-->
+                <div class="input-group margin-bottom-20">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock mycolor"></i></span>
+                    <input type="password" name="password" value="" placeholder="Password" size="60" maxlength="255" class="form-control"/></div>
+                <!--intro-->
+                <div class="input-group margin-bottom-20">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-pencil mycolor"></i></span>
+                    <input type="text" name="intro" value="" placeholder="Introduce yourself, please!" size="60" maxlength="255" class="form-control"/></div>
+                <!--avatar-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <input class="btn-u pull-left" type="submit"  value="Sign Up"/>
+                    </div>
+                </div>
             </form>
         </div>
     </div>
+</div>
+
 </body>
 </html>
