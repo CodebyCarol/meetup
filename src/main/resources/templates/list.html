@@ -118,6 +118,16 @@
         </div>
     </div>
 
+    <!--USERS-->
+    <div th:if="${user}">
+        <div class="list-group">
+            <h2>Users</h2>
+            <div th:each="user: ${users}">
+                <a class="list-group-item list-group-item-action" th:text="${user.name}" th:href="'/user/' + ${user.getId()}"></a>
+            </div>
+        </div>
+    </div>
+
 </div>
 
 ​
