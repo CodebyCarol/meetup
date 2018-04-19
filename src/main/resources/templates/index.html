@@ -46,10 +46,11 @@
         <h3 th:unless="${isSuccess}">u gotta choose another name</h3>
     </div>
     <!--div class="counter"-->
-    <a th:href="@{/}" th:include="counter :: counter"></a>
+    <!--/*@thymesVar id="counter" type="templates"*/-->
+    <div th:if="${counter}" th:include="counter :: counter"></div>
     <!--"@{/comments(prodId=${prod.id})}"-->
     <!--/div-->
-</div>
+</div>0
 
 
 </body>

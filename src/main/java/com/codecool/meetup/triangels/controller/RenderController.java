@@ -33,6 +33,8 @@ public class RenderController {
         //TODO log
         model.addAttribute("isLogged", session.getAttribute("name")); // ha ez true, van session, ha nem, akkor nincs -
         model.addAttribute("list", true);
+        //****added counter - try :)
+        model.addAttribute("counter",true);
         model.addAttribute("eventlist", eventService.getAll());
         //counting created events
         model.addAttribute("countEvents", eventService.countAll());
